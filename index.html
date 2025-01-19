@@ -17,34 +17,28 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- Preload images -->
   </head>
   <body>
-    <section></section>
-    <div class="navbar">
-      <a href="#" class="logo">logo</a>
-
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="">Home</a></li>
-        <li class="nav-item"><a href="">Team <i class="uil uil-angle-down"></i></a>
-          <ul>
-            <li><a href="">UX Designer</a></li>
-            <li><a href="">Graphics</a></li>
-            <li><a href="">Backend</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="">Bikes <i class="uil uil-angle-down"></i></a></li>
-        <ul>
-          <li><a href="">Shop</a></li>
-          <li><a href="">Book a Bike</a></li>
-          <li><a href="">Bike Rental</a></li>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">BikeShop</a>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item dropdown"><a href="#">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a href="#">Bikes</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Book a Bike</a></li>
+              <li><a href="#">Bike Rental</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#">Pages</a></li>
+          <li class="nav-item"><a href="#">Contacts</a></li>
         </ul>
-        <li class="nav-item"><a href="">Pages</a></li>
-        <li class="nav-item"><a href="">Contacts</a></li>
-      </ul>
-    </div>
-
-    <!-- Custom JS link -->
-    <script src="./assets/js/main.js" defer></script>
+      </div>
+    </nav>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
