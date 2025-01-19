@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*De aqui para abajo son los estilos para el footer*/
+.footer {
+    display: flex; /*Para que se alinea en forma horizontal*/
+    gap: 100px; /*Para que haya un espacio de 100px entre los div que estan dentro*/
+    background-color: black;
+    color: white;
+    padding: 20px;
+    justify-content: center;
+}
+
+.title {
+    padding: 0px 0px 10px 0px;
+}
+
+.contact a {
+    color: inherit;
+}
+
+.customer li{
+    list-style-type: none
+}
+
+.customer a {
+    color: inherit;
+}
+
+.send {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 5px;
+}
+
+
+
+
+
