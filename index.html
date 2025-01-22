@@ -2,8 +2,101 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bicycle Shop</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">BikeShop</a>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item dropdown"><a href="#">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a href="#">Bikes</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Book a Bike</a></li>
+              <li><a href="#">Bike Rental</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#">Pages</a></li>
+          <li class="nav-item"><a href="#">Contacts</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Este bloque tiene el Sobre Pie de pagina-->
+    <div class="brands">
+      <div class="carrusel">
+        <img src="/assets/img/Logo RockBross.png" alt="RockBross" height="80px">  
+        <img src="/assets/img/Logo Deore.png" alt="Deore" height="180px"> 
+        <img src="/assets/img/Logo KMC.png" alt="KMC" height="80px">  
+        <img src="/assets/img/Logo Maxxis.png" alt="Maxxis" height="120px"> 
+        <img src="/assets/img/Logo ProWheel.png" alt="Prowheel" height="120px"> 
+        <img src="/assets/img/Logo Shimano.png" alt="Shimano" height="110px">
+      </div>
+
+    </div>
+
+    <!--Este bloque contendra el pie de pagina-->
+    <div class="footer"> 
+        <div class="intro"> <!--Breve descripcion de Bicycle Shop-->
+          <h2 class="title">Bicycle Shop</h2>
+          <p>
+            Ofrecemos bicicletas, accesorios y todo lo que <br>
+            necesitas para disfrutar del ciclismo al máximo. <br> 
+            ¡Ven y equipa tu pasión! 
+          </p>
+
+        </div>
+
+        <div class="customer">
+          <h2 class="title">Atencion al cliente</h2>
+          <ul>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Nuestras tiendas</a></li>
+            <li><a href="#">Libro de reclamaciones</a></li>
+            <li><a href="#">Delivery</a></li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <h2 class="title">Contacto</h2>
+          <ul>
+            <li>Telf: 01 555 1234</li>
+            <li>Cel: +51 955123456</li>
+            <li>Email: <a href="">contacto@bicycleshop.com</a></li>
+            <li>Instagram: <a href="">@bicycle_shop</a></li>
+          </ul>
+        </div>
+
+        <div class="message">
+          <h2 class="title">Mensaje</h2>
+          <form class="send" action="#" method="post">
+            <textarea class="menssage_area" name="mensaje" placeholder="Escribe aqui tu mensaje o sugerencia..." required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+
+        </div>
+
+    </div>
+
+    <!-- Custom JS link -->
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
