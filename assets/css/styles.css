@@ -5,6 +5,32 @@
     text-decoration: none;
 }
 
+.brands {
+    
+    width: 85%;
+    height: 150px;
+    overflow: hidden; /*oculta las imagenes que estas fuera del div*/
+    /*border: 5px solid blue;*/   
+    margin: 0 auto; /*Centra todo el bloque de un DIV al centro de la pagina*/
+}
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    animation: desplazamiento 10s linear infinite;
+}
+
+@keyframes desplazamiento{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 /*De aqui para abajo son los estilos para el footer*/
 .footer {
     display: flex; /*Para que se alinea en forma horizontal*/
@@ -38,6 +64,13 @@
 
 button {
     padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+
+.message .send textarea {
+    width: 300px;
+    height: 60px;
+    resize: none;
 }
 
 
