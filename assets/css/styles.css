@@ -250,7 +250,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    animation: desplazamiento 40s linear infinite;
+    animation: desplazamiento 10s linear infinite;
 }
 
 @keyframes desplazamiento{
