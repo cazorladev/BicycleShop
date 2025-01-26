@@ -101,24 +101,47 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0% 5%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
     flex-direction: column;
     /*border: 2px solid blue;*/
     margin: 0 auto;
     margin-top: 70px;
-    background-image: url('/assets/img/Ciclismo\ 4v.jpg');
+    /*background-image: url('/assets/img/Ciclismo\ 4v.jpg');*/
+    background-color: #b0b0b0;
 }
 
-.central .bikes {
-    overflow: hidden;
+.central .life {
+    /*border: 2px solid green;*/
+    margin-top: 10px;
+    object-fit: contain;
+    max-width: 100%;    
+}
+
+.central .life img {
+    max-width: 100%;
+}
+
+.central .life h2 {
+    position: absolute;
+    color: white;
+    margin: 5% 5%;
+    font-size: 250%;
+}
+
+.bikes {
+    
     display: flex;
     /*border: 2px solid blue;*/
     margin-top: 5%;
     height: 250px;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.bikes img {
+    /*Especificamos el tamaño maximo de las imagenes para que funcione el overflow:hidden*/
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .central .bikes a {
@@ -133,12 +156,29 @@ body {
     display: flex;
     justify-content: space-between; /*Alinea horizontalmente con tal que abarque todo el ancho del contenedor, dejando espacion iguales al medio*/
     align-items: center;
-    border: 2px solid green;
-    height: 250px;
+    /*border: 2px solid green;*/
     width: 100%;
+    padding: 0px 0px;
 }
 
-.central .post_bike a {
+.central .post_bike .under_bike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid green;*/
+    width: 100%;
+    height: 90%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.central .post_bike .under_bike img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.central .post_bike .under_bike a {
     color: white;
     text-shadow: 2px 2px black;
     font-size: 25px;
@@ -146,11 +186,10 @@ body {
     position: absolute;
 }
 
-.central .post_bike .under_bike {
-    border: 2px solid green;
-    width: 30%;
-    height: 90%;
-    flex-wrap: wrap;
+.central .post_bike .under_bike .img_post_bike {
+    object-fit: contain;
+    height: 250px;
+    padding: 15px 0px;
 }
 
 .img_bike {
@@ -167,7 +206,34 @@ body {
     position: absolute;
 }
 
+.box_black2 {
+    height: 225px;
+    width: 28%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
 
+@media (max-width: 768px) {
+    .post_bike {
+        flex-direction: column;
+        align-items: center;
+        flex: none;
+    }
+
+    .under_bike {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .box_black2 {
+        width: 90%;
+    }
+
+    .central .post_bike .under_bike a {
+        font-size: 50px;
+    }
+}
 
 .brands {
     
@@ -184,7 +250,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    animation: desplazamiento 60s linear infinite;
+    animation: desplazamiento 40s linear infinite;
 }
 
 @keyframes desplazamiento{
