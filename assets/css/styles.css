@@ -1,81 +1,82 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
 body {
-  background-color: #f4f4f4;
+    background-color: #f4f4f4;
 }
 
 .navbar {
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px ;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-  font-size: 1.8em;
-  font-weight: 700;
-  color: #333;
-  text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
 }
 
 .nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-item a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 .nav-item a:hover {
-  color: #03c04a;
+    color: #03c04a;
 }
 
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  padding: 10px;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+    display: block;
 }
 
 .menu-toggle {
-  display: none;
-  font-size: 1.5em;
-  background: none;
-  border: none;
-  cursor: pointer;
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  .nav-menu {
+    .nav-menu {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -84,45 +85,241 @@ body {
     width: 100%;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+    }
 
-  .nav-menu.show {
+    .nav-menu.show {
     display: flex;
-  }
+    }
 
-  .menu-toggle {
+    .menu-toggle {
     display: block;
-  }
+    }
+}
+/*Este bloque es los estilos del cuerpo central*/
+.central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0% 5%;
+    flex-direction: column;
+    /*border: 2px solid blue;*/
+    margin: 0 auto;
+    margin-top: 70px;
+    /*background-image: url('/assets/img/Ciclismo\ 4v.jpg');*/
+    background-color: #b0b0b0;
 }
 
-
-/* 
-.poppins-regular {
-  font-family: "Poppins", serif;
-  font-weight: 400;
-  font-style: normal;
+.central .life {
+    /*border: 2px solid green;*/
+    margin-top: 10px;
+    object-fit: contain;
+    max-width: 100%;    
 }
 
-.poppins-medium {
-  font-family: "Poppins", serif;
-  font-weight: 500;
-  font-style: normal;
+.central .life img {
+    max-width: 100%;
 }
 
-.poppins-semibold {
-  font-family: "Poppins", serif;
-  font-weight: 600;
-  font-style: normal;
+.central .life h2 {
+    position: absolute;
+    color: white;
+    margin: 5% 5%;
+    font-size: 250%;
 }
 
-.poppins-bold {
-  font-family: "Poppins", serif;
-  font-weight: 700;
-  font-style: normal;
+.bikes {
+    
+    display: flex;
+    /*border: 2px solid blue;*/
+    margin-top: 5%;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.poppins-extrabold {
-  font-family: "Poppins", serif;
-  font-weight: 800;
-  font-style: normal;
-} */
+.bikes img {
+    /*Especificamos el tamaño maximo de las imagenes para que funcione el overflow:hidden*/
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.central .bikes a {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+}
+
+.central .post_bike {
+    display: flex;
+    justify-content: space-between; /*Alinea horizontalmente con tal que abarque todo el ancho del contenedor, dejando espacion iguales al medio*/
+    align-items: center;
+    /*border: 2px solid green;*/
+    width: 100%;
+    padding: 0px 0px;
+}
+
+.central .post_bike .under_bike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid green;*/
+    width: 100%;
+    height: 90%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.central .post_bike .under_bike img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.central .post_bike .under_bike a {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 25px;
+    font-weight: 900;
+    position: absolute;
+}
+
+.central .post_bike .under_bike .img_post_bike {
+    object-fit: contain;
+    height: 250px;
+    padding: 15px 0px;
+}
+
+.img_bike {
+    object-fit: contain; /*Mantiene la proporcion de la imagen*/
+    height: 100%;
+    padding: 15px 0px;
+}
+
+.box_black {
+    height: 250px;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    position: absolute;
+}
+
+.box_black2 {
+    height: 225px;
+    width: 28%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    .post_bike {
+        flex-direction: column;
+        align-items: center;
+        flex: none;
+    }
+
+    .under_bike {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .box_black2 {
+        width: 90%;
+    }
+
+    .central .post_bike .under_bike a {
+        font-size: 50px;
+    }
+}
+
+.brands {
+    
+    width: 90%;
+    height: 100px;
+    overflow: hidden; /*oculta las imagenes que estas fuera del div*/
+    /*border: 2px solid blue; */
+    margin: 0 auto; /*Centra todo el bloque de un DIV al centro de la pagina*/
+    display: flex;
+}
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    animation: desplazamiento 10s linear infinite;
+}
+
+@keyframes desplazamiento{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/*De aqui para abajo son los estilos para el footer*/
+.footer {
+    display: flex; /*Para que se alinea en forma horizontal*/
+    gap: 25px; /*Para que haya un espacio de 100px entre los div que estan dentro*/
+    background-color: black;
+    color: white;
+    padding: 20px 5%;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        flex: none;
+    }
+
+    .sub_footer {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.sub_footer {
+    width: 100%;
+    flex-wrap: wrap; /*Ajusta el contenido de los div automaticamente*/
+    /*border: 5px solid white;*/
+}
+
+.title {
+    padding: 0px 0px 10px 0px;
+}
+
+.sub_footer a {
+    color: inherit;
+}
+
+.sub_footer li{
+    list-style-type: none
+}
+
+.sub_footer a {
+    color: inherit;
+}
+
+.send {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+
+.sub_footer .send textarea {
+    width: 100%;
+    height: 60px;
+    resize: none;
+}
