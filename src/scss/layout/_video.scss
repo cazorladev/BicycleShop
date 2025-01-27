@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+
+.video {
+    position: relative;
+    min-height: 40rem;
+    max-height: 50rem;
+    overflow: hidden;
+
+    .overlay {
+        position: absolute;
+        background: linear-gradient(270deg, rgba(v.$verde_azulado,60%), rgba(v.$verde_azulado,90%));
+        inset: 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+    }
+    video {
+        width: auto;
+    }
+}
+
+.video__contenido {
+    h2 {
+        color: v.$blanco;
+        font-size: 7rem;
+        margin: 0;
+    }
+    a {
+        color: v.$blanco;
+        font-size: 1.8rem;
+
+        &:hover {
+            color: v.$rojo;
+        }
+    }
+    span {
+        color: v.$blanco;
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    p {
+        color: v.$blanco;
+        margin: 0;
+        font-size: 1.8rem;
+    }
+}
+
+.ruta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
