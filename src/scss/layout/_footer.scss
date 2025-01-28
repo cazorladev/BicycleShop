@@ -1,0 +1,98 @@
+@use 'base/variables' as v;
+
+.footer {
+    margin-top: 5rem;
+    padding: 100px 0 50px 0;
+    background-color: v.$verde_azulado;
+    color: v.$blanco;
+    .footer-link {
+        display: flex;
+    }
+}
+.link {
+    width: 30rem;
+    h3 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    a {
+        font-size: 1.7rem;
+        color: v.$gris;
+        display: block;
+        margin-bottom: 2rem;
+
+        &:hover {
+            color: v.$blanco;
+        }
+    }
+}
+.socials {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    a {
+        display: inline-block;
+        min-height: 40px;
+        width: 40px;
+        background-color: v.$social-icon;
+        margin: 0 15px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: v.$blanco;
+        font-size: 2rem;
+        &:hover {
+            background-color: v.$social-bg;
+        }
+    }
+}
+form {
+    display: flex;
+    flex-direction: column;
+    input {
+        background-color: transparent;
+        padding: 1.4rem;
+        outline: none;
+        border: 2px solid v.$gris;
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+        color: v.$gris_azulado;
+        &:hover {
+            background-color: v.$social-bg;
+        }
+    }
+    .btn {
+        background-color: v.$social-icon;
+        border: 0;
+    }
+}
+::placeholder {
+    color: v.$gris;
+}
+hr {
+    border: 1px solid v.$gris;
+}
+.footer-text {
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-size: 1.5rem;
+    }
+}
+@media(max-width:991px){
+    .footer {
+        padding: 3rem;
+    }
+    .footer-link {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .socials {
+        justify-content: center;
+    }
+    .footer-text {
+        text-align: center;
+    }
+}
