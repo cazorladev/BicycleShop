@@ -1,50 +1,86 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap);
 
-body {
-    font-family: 'Poppins', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #d3dae2;
-    color: #530a0a;
-    background-color: #eee;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
-h1, h2, h3 {
-    margin: 10 10px;
+body {
+    background-color: #f4f4f4;
 }
 
-.header {
-    background-color: #354453;
-    color: rgb(153, 122, 122);
-    padding: 10px 10px;
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px ;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.header h1 {
-    font-weight: 500;
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
 }
 
-.header nav ul {
+.nav-menu {
     list-style: none;
     display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
+    gap: 20px;
 }
 
-.header nav a {
+.nav-item a {
     text-decoration: none;
-    color: rgb(158, 145, 145);
-    font-weight: 400;
+    color: #333;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
-.header nav a:hover {
-    text-decoration: underline;
+.nav-item a:hover {
+    color: #03c04a;
 }
 
-#formulario h2 {
-    text-align:center;
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 15px;
 }
 #formulario p {
     padding: 0 0 0 20px;
@@ -61,7 +97,7 @@ h1, h2, h3 {
 
 #formulario input {
     width: 500px;
-    height:18px;
+    height: 25px;
     padding: 4px 6px 5px 12px;
 }
 
@@ -69,13 +105,25 @@ h1, h2, h3 {
     padding: 10px;
 }
 
+#identidad {
+    text-align: left;
+    padding: 5px;
+}
+
+#pago {
+    padding: 20px 10px 10px 10px;
+    margin: 20px;
+    text-align: left;
+}             
+
+
 button {
-    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
     width: 300px;   
     height: 10px;
     background-color: transparent;
     font-weight: semibold;
-    color: #444;
+    color: #444 ;
     font-size: 17px;
     padding: 15px 15px 30px 15px;
     border: 2px solid #eee;
@@ -92,4 +140,37 @@ button {
   button:active {
     box-shadow: inset .2rem .2rem 1rem #fff
       , inset -.2rem -.2rem 1rem #ccc
+  }
+
+  #aceptar {
+    display: grid;
+    font-size: 10px;
+    
+  }
+
+  #aceptar label {
+    padding: 15px;
+    display: inline-block;
+  }
+
+
+  input#mi-checkbox {
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+     margin-right: 10px;
+    transform: scale(1.5);
+  }
+
+  #boton-pago {
+    padding: 0 10px 10px 10px;
+    margin: 0 10px 10px 10px;
+  }
+  
+  span {
+    color: #000000DE    ;
+    cursor: pointer;
+  }
+  span :hover {
+    text-decoration: underline;
   }

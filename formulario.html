@@ -11,42 +11,92 @@
 <body>
 
     <header class="header">
-        <h1>Bike Shop-Tienda de Bicicletas y accesorios</h1>
-        <nav>
-            <ul>
-                <li><a href="#bicicletas">bicicletas</a></li>
-                <li><a href="#accesorios">accesorios</a></li>
-                <li><a href="carrito.html">carrito compras</a></li>
-            </ul>
-        </nav>
-    </header>
-
+        <div class="contenedor header__contenido">
+          <h1>Bicycle<span>Shop</span></h1>
+          <nav class="navegacion-principal">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Bikes</a>
+            <a href="#">Rides</a>
+            <a href="#">Contact</a>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </nav>
+        </div>
+      </header>
     <section class="formulario" id="formulario">
-        <h2>Formulario de compra</h2>
+
+        <h2 id="titulo">Formulario de compra</h2>
        
         <p><i class="bi bi-exclamation-triangle-fill"></i>Para poder adquirir el producto y proseguir con la compra , rellena este formulario :</a></p>
  
         <form>
-         <label for="name"><i class="bi bi-file-person"></i>Nombre:</label>
-         <input id="name" name="Nombre" required></input>
- 
-         <label for="email"><i class="bi bi-envelope"></i>Email:</label>
-         <input id="email" name="email" required></input>
+
+          <h2 id="identidad"><i class="bi bi-person-raised-hand"></i> Datos de Identidad</h2>
+
+         <label for="name"><i class="bi bi-file-person"></i>Nombre completo:</label>
+         <input type="text" id="text" name="Nombre" placeholder="Ingresa tu nombre" required></input>   
+
+        <label for="ddcc"><i class="bi bi-calendar"></i>Fecha de nacimiento:</label>
+         <input type="date" id="date" name="ddcc" required></input>
+
+         <label for="email"><i class="bi bi-envelope-at"></i>Email:</label>
+         <input type="email" id="email" name="email" placeholder="Ingresa tu email" required></input>
 
          <label for="numero"><i class="bi bi-telephone"></i>Numero:</label>
-         <input id="numero" name="numero" required></input>
+         <input type="number" id="number" name="numero" placeholder="Ingresa tu número telefonico" required></input>
+
+         <label for="codigo"><i class="bi bi-envelope-paper"></i>Código postal:</label>
+         <input type="number" id="codigo" name="codigo" placeholder="Ingresa tu código postal" required></input>
+        
+
+        <h2 id="pago"><i class="bi bi-lock"></i> Datos de pago</h2>
  
          <label for="tarjeta"><i class="bi bi-credit-card"></i>Numero de tarjeta:</label>
-         <input id="tarjeta" name="tarjeta" required></input>
+         <input type="number" id="number" name="tarjeta" required></input>
+          
+         <label for="cvv"><i class="bi bi-key"></i>CVV / CVC:</label>
+         <input type="password" id="password" name="cvv" required></input>
 
-         <label for="ddcc"><i class="bi bi-calendar"></i>DD / CC :</label>
-         <input id="ddcc" name="ddcc" required></input>
+         <label for="expiracion"><i class="bi bi-calendar-x"></i>Fecha de expiración (MM/YY):</label>
+        <input type="text" id="expiracion" name="expiracion" placeholder="MM/YY" maxlength="5" required>
 
-         <label for="cvv"><i class="bi bi-key"></i>CVV:</label>
-         <input id="cvv" name="cvv" required></input> 
- 
-         <button type="submit">Pagar 10.00€ con CC</button>
-         
+        <script>
+            document.getElementById('expiracion').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, ''); // Solo permite números
+             if (value.length >= 2) {
+             value = value.substring(0,2) + '/' + value.substring(2,4);
+             }
+            e.target.value = value;
+            });
+        </script>
+
         </form>
+
+
+
+        
+    </section>
+
+    <section id="aceptar">
+      <form id="formulario-2">
+    
+          <label>
+            <input type="checkbox" id="mi-checkbox" required>Permito que BikeShop me envíe actualizaciones y anuncios por correo electrónico.
+          </label>
+
+  
+          <label>
+            <input type="checkbox" id="mi-checkbox" required>Acepto las condiciones de la <span><a href="/politica.html" target="_blank" class="link">
+            Politica de privacidad de BikeShop</a></span> como vendedor y comerciante registrado ,
+             y para permitirnos proporcionar articulos digitales  de inmediato , renuncio a cualquier derecho de retiro o reembolso.
+          </label>
+   
+        </section>
+
+      <section id="boton-pago">
+
+      <button type="submit">Pagar $1000 with CC</button>
+      </form>
+      
     </section>
 </body>
