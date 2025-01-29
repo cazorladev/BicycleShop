@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap);
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3dae2;
+    color: #530a0a;
+    background-color: #eee;
+}
+
+h1, h2, h3 {
+    margin: 10 10px;
+}
+
+.header {
+    background-color: #354453;
+    color: rgb(153, 122, 122);
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    font-weight: 500;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: rgb(158, 145, 145);
+    font-weight: 400;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+#formulario h2 {
+    text-align:center;
+}
+#formulario p {
+    padding: 0 0 0 20px;
+} 
+
+#formulario i {
+    padding: 20px 20px 20px 0;
+}
+
+#formulario  form {
+    display: grid;
+    padding: 20px;
+}
+
+#formulario input {
+    width: 500px;
+    height:18px;
+    padding: 4px 6px 5px 12px;
+}
+
+#formulario label {
+    padding: 10px;
+}
+
+button {
+    margin: 10px 0 0 0;
+    width: 300px;   
+    height: 10px;
+    background-color: transparent;
+    font-weight: semibold;
+    color: #444;
+    font-size: 17px;
+    padding: 15px 15px 30px 15px;
+    border: 2px solid #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease; 
+    box-shadow: .5em .5rem 1rem #ccc,
+      -.5em -.5rem 1rem #fff
+  }
+  button:hover {
+    box-shadow: .5em .5rem 1rem #fff
+      , -.5em -.5rem 1rem #ccc
+  }
+  button:active {
+    box-shadow: inset .2rem .2rem 1rem #fff
+      , inset -.2rem -.2rem 1rem #ccc
+  }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Shop</title>
+    <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/styleCarrito.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Bike Shop-Tienda de Bicicletas y accesorios</h1>
+        <nav>
+            <ul>
+                <li><a href="#bicicletas">bicicletas</a></li>
+                <li><a href="#accesorios">accesorios</a></li>
+                <li><a href="carrito.html">carrito compras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="formulario" id="formulario">
+        <h2>Formulario de compra</h2>
+       
+        <p><i class="bi bi-exclamation-triangle-fill"></i>Para poder adquirir el producto y proseguir con la compra , rellena este formulario :</a></p>
+ 
+        <form>
+         <label for="name"><i class="bi bi-file-person"></i>Nombre:</label>
+         <input id="name" name="Nombre" required></input>
+ 
+         <label for="email"><i class="bi bi-envelope"></i>Email:</label>
+         <input id="email" name="email" required></input>
+
+         <label for="numero"><i class="bi bi-telephone"></i>Numero:</label>
+         <input id="numero" name="numero" required></input>
+ 
+         <label for="tarjeta"><i class="bi bi-credit-card"></i>Numero de tarjeta:</label>
+         <input id="tarjeta" name="tarjeta" required></input>
+
+         <label for="ddcc"><i class="bi bi-calendar"></i>DD / CC :</label>
+         <input id="ddcc" name="ddcc" required></input>
+
+         <label for="cvv"><i class="bi bi-key"></i>CVV:</label>
+         <input id="cvv" name="cvv" required></input> 
+ 
+         <button type="submit">Pagar 10.00€ con CC</button>
+         
+        </form>
+    </section>
+</body>
