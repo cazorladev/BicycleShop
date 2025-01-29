@@ -1,0 +1,24 @@
+{
+  "name": "bicycleshop",
+  "version": "1.0.0",
+  "description": "Proyecto tienda online",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "keywords": [
+    "NPN",
+    "SASS",
+    "HTML",
+    "CSS",
+    "JS"
+  ],
+  "author": "Grupo 1",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.0",
+    "sass": "^1.83.4"
+  }
+}
