@@ -118,13 +118,17 @@ body {
 
 .central .life img {
     max-width: 100%;
+    border-radius: 20px;
 }
 
 .central .life h2 {
     position: absolute;
-    color: white;
-    margin: 5% 5%;
-    font-size: 250%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 8% 8%;
+    font-size: 300%;
+    font-family: "Roboto", serif;
+    font-weight: 900;
+
 }
 
 .bikes {
@@ -136,12 +140,23 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.bikes img {
+    transition: transform 0.3s ease;
+}
+
+.bikes:hover img {
+    transform: scale(1.1); /*Aumenta el zoom al pasar el mouse por encima de la imagen*/
 }
 
 .bikes img {
     /*Especificamos el tamaño maximo de las imagenes para que funcione el overflow:hidden*/
     max-width: 100%;
     max-height: 100%;
+    margin: 0px 10px;
 }
 
 .central .bikes a {
@@ -158,7 +173,7 @@ body {
     align-items: center;
     /*border: 2px solid green;*/
     width: 100%;
-    padding: 0px 0px;
+    margin: 2% 0% 2% 0%;
 }
 
 .central .post_bike .under_bike {
@@ -166,16 +181,18 @@ body {
     justify-content: center;
     align-items: center;
     /*border: 2px solid green;*/
-    width: 100%;
-    height: 90%;
-    flex-wrap: wrap;
+    width: 32%;
     overflow: hidden;
-    flex-wrap: wrap;
+    position: relative;
+    
 }
 
 .central .post_bike .under_bike img {
-    max-width: 100%;
-    max-height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.central .post_bike .under_bike:hover img {
+    transform: scale(1.1); /*Aumenta el zoom al pasar el mouse por encima de la imagen*/
 }
 
 .central .post_bike .under_bike a {
@@ -184,6 +201,7 @@ body {
     font-size: 25px;
     font-weight: 900;
     position: absolute;
+    
 }
 
 .central .post_bike .under_bike .img_post_bike {
@@ -200,17 +218,19 @@ body {
 
 .box_black {
     height: 250px;
-    width: 90%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
     position: absolute;
+    border-radius: 20px;
 }
 
 .box_black2 {
-    height: 225px;
-    width: 28%;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
+    border-radius: 20px;
 }
 
 @media (max-width: 768px) {
@@ -220,14 +240,14 @@ body {
         flex: none;
     }
 
-    .under_bike {
+    .central .post_bike .under_bike {
         flex: none;
         width: 100%;
         text-align: center;
     }
 
-    .box_black2 {
-        width: 90%;
+    .central .post_bike .under_bike .box_black2 {
+        width: 100%;
     }
 
     .central .post_bike .under_bike a {
@@ -250,7 +270,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    animation: desplazamiento 10s linear infinite;
+    animation: desplazamiento 40s linear infinite;
 }
 
 @keyframes desplazamiento{
@@ -316,10 +336,12 @@ body {
 button {
     padding: 5px;
     margin: 10px 0px 0px 0px;
+    border-radius: 5px;
 }
 
 .sub_footer .send textarea {
     width: 100%;
     height: 60px;
     resize: none;
+    border-radius: 5px;
 }
