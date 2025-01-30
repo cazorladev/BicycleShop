@@ -152,8 +152,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -162,8 +161,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -171,9 +169,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -181,9 +179,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -192,9 +190,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -238,8 +236,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -247,8 +245,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -256,7 +254,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -264,7 +262,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -345,9 +343,7 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin: 0 0 5rem 0;
   font-weight: 900;
 }
@@ -386,7 +382,6 @@ body > section {
   font-weight: 600;
   margin: 0;
 }
-
 .header .header__contenido h1 span {
   color: #df453e;
 }
@@ -402,6 +397,62 @@ body > section {
   color: #df453e;
 }
 
+.video {
+  position: relative;
+  min-height: 30rem;
+  max-height: 40rem;
+  overflow: hidden;
+}
+.video .overlay {
+  position: absolute;
+  background: linear-gradient(270deg, rgba(27, 62, 65, 0.6), rgba(27, 62, 65, 0.9));
+  inset: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.video video {
+  width: auto;
+}
+
+.video__contenido h2 {
+  color: #fff;
+  font-size: 7rem;
+  margin: 0;
+}
+.video__contenido a {
+  color: #fff;
+  font-size: 1.8rem;
+}
+.video__contenido a:hover {
+  color: #df453e;
+}
+.video__contenido span {
+  color: #fff;
+  margin: 0;
+  font-size: 1.8rem;
+}
+.video__contenido p {
+  color: #fff;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.ruta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-productos {
+  width: 80vw;
+  height: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .header-productos {
   width: 100%;
   text-align: center;
@@ -412,9 +463,82 @@ body > section {
   text-transform: uppercase;
 }
 
-/* MAIN */
+.products {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
 
-/* FOOTER */
+.product {
+  position: relative;
+  background-color: #fff;
+  width: 35rem;
+  height: 55rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 40px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.product:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.product p {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.image {
+  width: 100%;
+  height: 60%;
+  display: grid;
+  place-items: center;
+}
+.image img {
+  width: 240px;
+}
+
+.name-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.name-price h3 {
+  font-size: 1.5em;
+  text-transform: capitalize;
+  margin: 0;
+}
+.name-price span {
+  font-size: 1.5em;
+  color: #df453e;
+}
+
+.stars {
+  font-size: 1.3em;
+  color: #fbc900;
+}
+
+.buy {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.buy button {
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
+  background-color: #1b3e41;
+  color: #fff;
+}
+.buy button:hover {
+  transform: scale(1.1);
+}
 
 .footer {
   margin-top: 5rem;
@@ -488,6 +612,10 @@ form .btn {
 
 ::placeholder {
   color: #728385;
+}
+
+hr {
+  border: 1px solid #728385;
 }
 
 .footer-text {
