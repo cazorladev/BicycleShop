@@ -3,6 +3,4 @@ document.querySelector(".menu-toggle").addEventListener("click", function () {
   this.classList.toggle("active");
 });
 
-const carrusel = document.querySelector(".carrusel");
-const clone = carrusel.innerHTML;
-carrusel.innerHTML += clone;
+

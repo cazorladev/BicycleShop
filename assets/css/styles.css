@@ -377,21 +377,21 @@ body > section {
 }
 
 .header .header__contenido {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .header .header__contenido h1 {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   font-weight: 600;
   margin: 0;
 }
 
 .header .header__contenido h1 span {
   color: #df453e;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .navegacion-principal {
@@ -424,7 +424,7 @@ body > section {
   justify-content: center;
   padding: 0% 5%;
   flex-direction: column;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   margin: 0 auto;
   margin-top: 10px;
   /*background-image: url('/assets/img/Ciclismo\ 4v.jpg');*/
@@ -432,7 +432,7 @@ body > section {
 }
 
 .central .life {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   margin-top: 10px;
   object-fit: contain;
   width: 100%;
@@ -582,24 +582,30 @@ body > section {
   }
 }
 
-.carrusel {
-  width: 90%;
-  height: 100px;
+.brands {
   overflow: hidden; /*oculta las imagenes que estas fuera del div*/
-  border: 2px solid blue;
+  width: 90%;
+  /* border: 2px solid green; */
+  margin: 0 auto;
+}
+
+.carrusel {
+  width: 3650px;
+  height: 100px;
+  /* border: 2px solid blue; */
   margin: 0 auto; /*Centra todo el bloque de un DIV al centro de la pagina*/
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  animation: desplazamiento 40s linear infinite;
+  animation: desplazamiento 10s linear infinite;
   padding: 1% 0% 1%;
 }
 
 .carrusel img {
-  /* height: 100%; */
   object-fit: contain;
   max-height: 100%;
+  /* border: 2px solid green; */
 }
 
 @keyframes desplazamiento {
@@ -607,7 +613,7 @@ body > section {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
