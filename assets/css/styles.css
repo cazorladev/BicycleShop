@@ -256,17 +256,15 @@ body {
     }
 }
 
-.brands {
-    
+
+
+
+.carrusel {
     width: 90%;
     height: 100px;
     overflow: hidden; /*oculta las imagenes que estas fuera del div*/
     /*border: 2px solid blue; */
     margin: 0 auto; /*Centra todo el bloque de un DIV al centro de la pagina*/
-    display: flex;
-}
-
-.carrusel {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,7 +282,7 @@ body {
 }
 
 /*De aqui para abajo son los estilos para el footer*/
-.footer {
+footer {
     display: flex; /*Para que se alinea en forma horizontal*/
     gap: 25px; /*Para que haya un espacio de 100px entre los div que estan dentro*/
     background-color: black;
@@ -294,20 +292,20 @@ body {
 }
 
 @media (max-width: 768px) {
-    .footer {
+    footer {
         flex-direction: column;
         align-items: center;
         flex: none;
     }
 
-    .sub_footer {
+    footer section {
         flex: none;
         width: 100%;
         text-align: center;
     }
 }
 
-.sub_footer {
+footer section {
     width: 100%;
     flex-wrap: wrap; /*Ajusta el contenido de los div automaticamente*/
     /*border: 5px solid white;*/
@@ -317,15 +315,15 @@ body {
     padding: 0px 0px 10px 0px;
 }
 
-.sub_footer a {
+footer section a {
     color: inherit;
 }
 
-.sub_footer li{
+footer section li{
     list-style-type: none
 }
 
-.sub_footer a {
+footer section a {
     color: inherit;
 }
 
@@ -340,7 +338,7 @@ button {
     border-radius: 5px;
 }
 
-.sub_footer .send textarea {
+footer section .send textarea {
     width: 100%;
     height: 60px;
     resize: none;
