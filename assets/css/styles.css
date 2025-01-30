@@ -394,6 +394,105 @@ body > section {
   /* border: 2px solid green; */
 }
 
+/* HAMBUR */
+/* Estilos para el botón de hamburguesa */
+.hamburger {
+  display: none; /* Ocultar en pantallas grandes */
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 1000;
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  width: 100%;
+  height: 2px;
+  background-color: #1b3e41;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #1b3e41;
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hamburger-inner::before {
+  top: -8px;
+}
+
+.hamburger-inner::after {
+  top: 8px;
+}
+
+/* Efecto de activación del botón de hamburguesa */
+.hamburger.active .hamburger-inner {
+  background-color: transparent;
+}
+
+.hamburger.active .hamburger-inner::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-inner::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Estilos para la navegación móvil */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Mostrar en pantallas pequeñas */
+  }
+
+  .navegacion-principal {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Ocultar el menú fuera de la pantalla */
+    width: 80%;
+    height: 100vh;
+    background-color: #1b3e41;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .navegacion-principal.active {
+    right: 0; /* Hace visible el menú */
+    background-color: #fff; /* Fondo claro para que los enlaces sean visibles */
+  }
+
+  .navegacion-principal a {
+    color: #1b3e41; /* Color oscuro para visibilidad */
+    font-size: 2rem;
+  }
+
+  .navegacion-principal a:hover {
+    color: #df453e; /* Color rojo al pasar el mouse */
+  }
+}
+/* NAVEGACION */
+
 .navegacion-principal {
   display: flex;
   gap: 2rem;
@@ -418,7 +517,6 @@ body > section {
 /* main */
 
 .central {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -430,6 +528,47 @@ body > section {
   /*background-image: url('/assets/img/Ciclismo\ 4v.jpg');*/
   background-color: #b0b0b0;
 }
+
+/* Animacion life */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.life h2 {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 8% 8%;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Agregar un efecto de resplandor para llamar la atención */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #f6cdc4, 0 0 10px #f6cdc4;
+  }
+  50% {
+    text-shadow: 0 0 15px #f6cdc4, 0 0 25px #f6cdc4;
+  }
+  100% {
+    text-shadow: 0 0 5px #f6cdc4, 0 0 10px #f6cdc4;
+  }
+}
+
+.life h2:hover {
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+/* dd */
 
 .central .life {
   /* border: 2px solid green; */

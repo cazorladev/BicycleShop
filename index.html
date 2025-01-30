@@ -1,8 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bicycle Shop - Encuentra las mejores bicicletas, accesorios y mantenimiento para tus aventuras sobre ruedas."
+    />
+    <meta
+      name="keywords"
+      content="bicicletas, accesorios de ciclismo, mantenimiento de bicicletas, tienda de bicicletas"
+    />
+    <meta name="author" content="Bicycle Shop" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.bicycleshop.com" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,57 +26,95 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <title>Bicycle Shop</title>
+    <title>Bicycle Shop | Venta y Mantenimiento de Bicicletas</title>
   </head>
   <body>
     <header class="header">
       <div class="contenedor header__contenido">
         <h1>Bicycle<span>Shop</span></h1>
-        <nav class="navegacion-principal">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Bikes</a>
-          <a href="#">Rides</a>
-          <a href="#">Contact</a>
-          <i class="fa-solid fa-cart-shopping"></i>
+
+        <!-- Botón de hamburguesa -->
+        <button class="hamburger" aria-label="Menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <!-- Navegación principal -->
+        <nav class="navegacion-principal" aria-label="Menú principal">
+          <a href="#home">Inicio</a>
+          <a href="#about">Nosotros</a>
+          <a href="#bikes">Bicicletas</a>
+          <a href="#rides">Rutas</a>
+          <a href="#contact">Contacto</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="central">
+      <section id="home" class="central">
         <!--<img src="/assets/img/Ciclismo 4v.jpg" alt="fondo" width="100%">-->
         <figure class="life">
-          <h2>Haz del camino <br> Tu mejor amigo</h2>
-          <img src="/assets/img/Ciclista MTB.jpg" alt="CiclistaMTB">
+          <h2>
+            Haz del camino <br />
+            Tu mejor amigo
+          </h2>
+          <img
+            src="/assets/img/Ciclista MTB.jpg"
+            alt="Ciclista en montaña disfrutando del paisaje"
+          />
         </figure>
-        
+
         <figure class="bikes">
-            <!--<img class="img_bike" src="/assets/img/Bikes/Atom.png" alt="Atom">-->
-            <img class="img_bike" src="/assets/img/Bikes/Camp.png" alt="Camp">
-            <img class="img_bike" src="/assets/img/Bikes/Specialized.png" alt="Specialized">
-            <img class="img_bike" src="/assets/img/Bikes/Trek.png" alt="Trek">
-            <div class="box_black"></div>
-            <a href="">Bicicletas</a>
+          <!--<img class="img_bike" src="/assets/img/Bikes/Atom.png" alt="Atom">-->
+          <img
+            class="img_bike"
+            src="/assets/img/Bikes/Camp.png"
+            alt="Bicicleta modelo Camp"
+          />
+          <img
+            class="img_bike"
+            src="/assets/img/Bikes/Specialized.png"
+            alt="Bicicleta modelo Specialized"
+          />
+          <img
+            class="img_bike"
+            src="/assets/img/Bikes/Trek.png"
+            alt="Bicicleta modelo Trek"
+          />
+          <div class="box_black"></div>
+          <a href="">Ver Bicicletas</a>
         </figure>
 
         <section class="post_bike">
           <figure class="under_bike">
-            <img class="img_post_bike" src="/assets/img/PostBike/Casco.png" alt="Casco">
+            <img
+              class="img_post_bike"
+              src="/assets/img/PostBike/Casco.png"
+              alt="Casco de seguridad para ciclismo"
+            />
             <div class="box_black2"></div>
-            <a href="">Indumentaria</a>
+            <a href="#indumentaria">Indumentaria</a>
           </figure>
 
           <figure class="under_bike">
-            <img class="img_post_bike" src="/assets/img/PostBike/Maza.png" alt="Maza">
+            <img
+              class="img_post_bike"
+              src="/assets/img/PostBike/Maza.png"
+              alt="Maza de bicicleta"
+            />
             <div class="box_black2"></div>
-            <a href="">Accesorios y <br>Componentes</a>
+            <a href="#accesorios">Accesorios y <br />Componentes</a>
           </figure>
 
           <figure class="under_bike">
-            <img class="img_post_bike" src="/assets/img/PostBike/Parttool.png" alt="Parttool">
+            <img
+              class="img_post_bike"
+              src="/assets/img/PostBike/Parttool.png"
+              alt="Parttool"
+            />
             <div class="box_black2"></div>
-            <a href="">Mantenimiento</a>
+            <a href="#mantenimiento">Mantenimiento</a>
           </figure>
         </section>
       </section>
@@ -72,20 +122,43 @@
       <!--Este bloque tiene el Sobre Pie de pagina-->
       <section class="brands">
         <figure class="carrusel">
-          <img src="/assets/img/Logo RockBross.png" alt="RockBross" height="80px">  
-          <img src="/assets/img/Logo Deore.png" alt="Deore" height="180px"> 
-          <img src="/assets/img/Logo KMC.png" alt="KMC" height="80px">  
-          <img src="/assets/img/Logo Maxxis.png" alt="Maxxis" height="120px"> 
-          <img src="/assets/img/Logo ProWheel.png" alt="Prowheel" height="120px"> 
-          <img src="/assets/img/Logo Shimano.png" alt="Shimano" height="110px">
+          <img
+            src="/assets/img/Logo RockBross.png"
+            alt="RockBross"
+            height="80px"
+          />
+          <img src="/assets/img/Logo Deore.png" alt="Deore" height="180px" />
+          <img src="/assets/img/Logo KMC.png" alt="KMC" height="80px" />
+          <img src="/assets/img/Logo Maxxis.png" alt="Maxxis" height="120px" />
+          <img
+            src="/assets/img/Logo ProWheel.png"
+            alt="Prowheel"
+            height="120px"
+          />
+          <img
+            src="/assets/img/Logo Shimano.png"
+            alt="Shimano"
+            height="110px"
+          />
           <!-- repetimos las imagenes para hacer el efecto de bucle infinito -->
-          <img src="/assets/img/Logo RockBross.png" alt="RockBross" height="80px">  
-          <img src="/assets/img/Logo Deore.png" alt="Deore" height="180px"> 
-          <img src="/assets/img/Logo KMC.png" alt="KMC" height="80px">  
-          <img src="/assets/img/Logo Maxxis.png" alt="Maxxis" height="120px"> 
-          <img src="/assets/img/Logo ProWheel.png" alt="Prowheel" height="120px"> 
-          <img src="/assets/img/Logo Shimano.png" alt="Shimano" height="110px">
-          
+          <img
+            src="/assets/img/Logo RockBross.png"
+            alt="RockBross"
+            height="80px"
+          />
+          <img src="/assets/img/Logo Deore.png" alt="Deore" height="180px" />
+          <img src="/assets/img/Logo KMC.png" alt="KMC" height="80px" />
+          <img src="/assets/img/Logo Maxxis.png" alt="Maxxis" height="120px" />
+          <img
+            src="/assets/img/Logo ProWheel.png"
+            alt="Prowheel"
+            height="120px"
+          />
+          <img
+            src="/assets/img/Logo Shimano.png"
+            alt="Shimano"
+            height="110px"
+          />
         </figure>
       </section>
     </main>
@@ -94,47 +167,46 @@
       <div class="contenedor">
         <div class="footer-link">
           <div class="link">
-            <h3>Useful links</h3>
+            <h3>Enlaces Útiles</h3>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our community</a></li>
-              <li><a href="#">Local events</a></li>
-              <li><a href="#">Privacy policy</a></li>
-              <li><a href="#">Service plus</a></li>
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Nuestra Comunidad</a></li>
+              <li><a href="#">Eventos Locales</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Servicios</a></li>
             </ul>
           </div>
           <div class="link">
-            <h3>Our Shop</h3>
+            <h3>Nuestra Tienda</h3>
             <ul>
-              <li><a href="#">Bikes & parts</a></li>
-              <li><a href="#">Clothing</a></li>
-              <li><a href="#">Bike for rent</a></li>
-              <li><a href="#">Booking form</a></li>
-              <li><a href="#">Service plus</a></li>
+              <li><a href="#bikes">Bicicletas y Piezas</a></li>
+              <li><a href="#clothing">Ropa</a></li>
+              <li><a href="#rent">Alquiler de Bicicletas</a></li>
+              <li><a href="#booking">Reservas</a></li>
             </ul>
           </div>
           <div class="link">
             <h3>Sitemap</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Contacts</a></li>
+              <li><a href="#home">Inicio</a></li>
+              <li><a href="#features">Características</a></li>
+              <li><a href="#shop">Tienda</a></li>
+              <li><a href="#news">Noticias</a></li>
+              <li><a href="#contact">Contacto</a></li>
             </ul>
           </div>
           <div class="link">
-            <h3>Follow us</h3>
+            <h3>Síguenos</h3>
             <div class="socials">
               <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
               <a href="#"><i class="fa-brands fa-instagram"></i></a>
               <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
               <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <h3>Subscribe</h3>
+            <h3>Suscríbete</h3>
             <form>
-              <input type="email" placeholder="email" />
-              <input class="btn" type="submit" value="Enviar" />
+              <input type="email" placeholder="Tu email" required />
+              <input class="btn" type="submit" value="Suscribirse" />
             </form>
           </div>
         </div>
@@ -147,6 +219,6 @@
     </footer>
 
     <!-- Custom JS link -->
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js" defer></script>
   </body>
 </html>
