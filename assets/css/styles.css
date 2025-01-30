@@ -309,8 +309,9 @@ template {
   display: none;
 }
 
+/* Estilos personalizados */
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* Establece el tamaño de fuente base a 10px para facilitar cálculos con rem */
   box-sizing: border-box;
   scroll-padding-top: 0rem;
 }
@@ -318,71 +319,72 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: inherit; /* Hereda el box-sizing para todos los elementos */
 }
 
 body {
-  font-family: "Poppins", serif;
+  font-family: "Poppins", serif; /* Fuente principal */
   font-optical-sizing: auto;
   font-style: normal;
-  color: #1b3e41;
-  font-size: 2rem;
-  background-color: #f0f2f2;
+  color: #1b3e41; /* Color de texto principal */
+  font-size: 2rem; /* Tamaño de fuente base */
+  background-color: #f0f2f2; /* Color de fondo */
 }
 
 p {
-  color: #728385;
-  line-height: 1.5;
+  color: #728385; /* Color de texto para párrafos */
+  line-height: 1.5; /* Espaciado entre líneas */
 }
 
 .contenedor {
-  width: 95%;
-  max-width: 120rem;
-  margin: 0 auto;
+  width: 95%; /* Ancho del contenedor */
+  max-width: 120rem; /* Ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
 h1,
 h2,
 h3 {
-  margin: 0 0 5rem 0;
-  font-weight: 900;
+  margin: 0 0 5rem 0; /* Margen inferior para títulos */
+  font-weight: 900; /* Grosor de la fuente */
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4rem; /* Tamaño de fuente para h1 */
 }
 
 h2 {
-  font-size: 4.6rem;
+  font-size: 4.6rem; /* Tamaño de fuente para h2 */
 }
 
 h3 {
-  font-size: 6rem;
-  text-align: center;
+  font-size: 6rem; /* Tamaño de fuente para h3 */
+  text-align: center; /* Centrado de texto */
 }
 
 img {
-  max-width: 100%;
+  max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
   width: 100%;
-  height: auto;
-  display: block;
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Elimina el espacio inferior en imágenes */
 }
 
 body > section {
-  padding: 10rem 0;
+  padding: 10rem 0; /* Padding superior e inferior para secciones */
 }
 
+/* Estilos para el encabezado */
 .header .header__contenido {
-  /* border: 2px solid green; */
   padding: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribuye el espacio entre elementos */
 }
+
 .header .header__contenido h1 {
   /* border: 2px solid green; */
   font-weight: 600;
@@ -390,11 +392,10 @@ body > section {
 }
 
 .header .header__contenido h1 span {
-  color: #df453e;
+  color: #df453e; /* Color rojo para el span dentro del h1 */
   /* border: 2px solid green; */
 }
 
-/* HAMBUR */
 /* Estilos para el botón de hamburguesa */
 .hamburger {
   display: none; /* Ocultar en pantallas grandes */
@@ -403,7 +404,7 @@ body > section {
   background-color: transparent;
   border: none;
   outline: none;
-  z-index: 1000;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .hamburger-box {
@@ -459,13 +460,13 @@ body > section {
 /* Estilos para la navegación móvil */
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Mostrar en pantallas pequeñas */
+    display: block; /* Muestra el botón en pantallas pequeñas */
   }
 
   .navegacion-principal {
     position: fixed;
     top: 0;
-    right: -100%; /* Ocultar el menú fuera de la pantalla */
+    right: -100%; /* Oculta el menú fuera de la pantalla */
     width: 80%;
     height: 100vh;
     background-color: #1b3e41;
@@ -478,12 +479,12 @@ body > section {
   }
 
   .navegacion-principal.active {
-    right: 0; /* Hace visible el menú */
-    background-color: #fff; /* Fondo claro para que los enlaces sean visibles */
+    right: 0; /* Muestra el menú */
+    background-color: #fff; /* Fondo claro para visibilidad */
   }
 
   .navegacion-principal a {
-    color: #1b3e41; /* Color oscuro para visibilidad */
+    color: #1b3e41; /* Color oscuro para enlaces */
     font-size: 2rem;
   }
 
@@ -491,8 +492,8 @@ body > section {
     color: #df453e; /* Color rojo al pasar el mouse */
   }
 }
-/* NAVEGACION */
 
+/* Estilos para la navegación principal */
 .navegacion-principal {
   display: flex;
   gap: 2rem;
@@ -504,18 +505,7 @@ body > section {
   color: #df453e;
 }
 
-/* .header-productos {
-  width: 100%;
-  text-align: center;
-}
-.header-productos h2 {
-  margin-top: 2rem;
-  font-size: 4em;
-  text-transform: uppercase;
-} */
-
-/* main */
-
+/* Estilos para el contenido central */
 .central {
   display: flex;
   align-items: center;
@@ -529,7 +519,7 @@ body > section {
   background-color: #b0b0b0;
 }
 
-/* Animacion life */
+/* Animación de fadeInUp */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -551,7 +541,7 @@ body > section {
   animation: fadeInUp 1.5s ease-out;
 }
 
-/* Agregar un efecto de resplandor para llamar la atención */
+/* Efecto de resplandor */
 @keyframes glow {
   0% {
     text-shadow: 0 0 5px #f6cdc4, 0 0 10px #f6cdc4;
@@ -568,8 +558,7 @@ body > section {
   animation: glow 1.5s infinite alternate ease-in-out;
 }
 
-/* dd */
-
+/* Estilos para las imágene Principal */
 .central .life {
   /* border: 2px solid green; */
   margin-top: 10px;
@@ -591,6 +580,7 @@ body > section {
   font-weight: 900;
 }
 
+/* Estilos para las imágenes de bicicletas */
 .bikes {
   display: flex;
   /*border: 2px solid blue;*/
@@ -608,9 +598,7 @@ body > section {
 }
 
 .bikes:hover img {
-  transform: scale(
-    1.1
-  ); /*Aumenta el zoom al pasar el mouse por encima de la imagen*/
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
 
 .bikes img {
@@ -653,9 +641,7 @@ body > section {
 }
 
 .central .post_bike .under_bike:hover img {
-  transform: scale(
-    1.1
-  ); /*Aumenta el zoom al pasar el mouse por encima de la imagen*/
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
 
 .central .post_bike .under_bike a {
@@ -721,6 +707,7 @@ body > section {
   }
 }
 
+/* Estilos para el carrusel de marcas */
 .brands {
   overflow: hidden; /*oculta las imagenes que estas fuera del div*/
   width: 90%;
@@ -756,6 +743,7 @@ body > section {
   }
 }
 
+/* Estilos para el pie de página */
 .footer {
   margin-top: 0rem;
   padding: 100px 0 50px 0;
