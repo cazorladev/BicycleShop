@@ -17,21 +17,23 @@
     <div class="contenedor header__contenido">
       <h1>Bicycle<span>Shop</span></h1>
       <nav class="navegacion-principal">
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <a href="#">About Us</a>
         <a href="#">Bikes</a>
         <a href="#">Rides</a>
         <a href="#">Contact</a>
-        <i class="fa-solid fa-cart-shopping"></i>
       </nav>
     </div>
   </header>
+  <div>
+    <a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i>Ver Carrito (<span id="cart-count">0</span>)</a>
+  </div>
   <div class="video">
     <div class="overlay">
       <div class="contenedor video__contenido">
         <h2>SHOP</h2>
         <div class="ruta">
-          <a href="#">Home</a>
+          <a href="index.html">Home</a>
           <span>/</span>
           <p>Shop</p>
         </div>
@@ -46,13 +48,13 @@
       <h2>products</h2>
     </div>
     <div class="products">
-      <div class="product">
+      <div class="product card-product">
         <div class="image">
           <img src="src/img/image1.jpg" alt="modelo 1">
         </div>
         <div class="name-price">
           <h3>Modelo 1</h3>
-          <span>$1000.0</span>
+          <span class="price">$1000.0</span>
         </div>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div class="stars">
@@ -63,16 +65,16 @@
           <i class="fa-solid fa-star"></i>
         </div>
         <div class="buy">
-          <button>Buy Now</button>
+          <button class="add-to-cart">Buy Now</button >
         </div>
       </div>
-      <div class="product">
+      <div class="product card-product">
         <div class="image">
           <img src="src/img/image1.jpg" alt="modelo 1">
         </div>
         <div class="name-price">
           <h3>Modelo 2</h3>
-          <span>$1000.0</span>
+          <span class="price">$1000.0</span>
         </div>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div class="stars">
@@ -83,16 +85,16 @@
           <i class="fa-solid fa-star"></i>
         </div>
         <div class="buy">
-          <button>Buy Now</button>
+          <button class="add-to-cart">Buy Now</button>
         </div>
       </div>
-      <div class="product">
+      <div class="product card-product">
         <div class="image">
           <img src="src/img/image1.jpg" alt="modelo 1">
         </div>
         <div class="name-price">
           <h3>Modelo 3</h3>
-          <span>$1000.0</span>
+          <span class="price">$1000.0</span>
         </div>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div class="stars">
@@ -103,16 +105,16 @@
           <i class="fa-solid fa-star"></i>
         </div>
         <div class="buy">
-          <button>Buy Now</button>
+          <button class="add-to-cart">Buy Now</button>
         </div>
       </div>
-      <div class="product">
+      <div class="product card-product">
         <div class="image">
           <img src="src/img/image1.jpg" alt="modelo 1">
         </div>
         <div class="name-price">
           <h3>Modelo 4</h3>
-          <span>$1000.0</span>
+          <span class="price">$1000.0</span>
         </div>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div class="stars">
@@ -123,16 +125,16 @@
           <i class="fa-solid fa-star"></i>
         </div>
         <div class="buy">
-          <button>Buy Now</button>
+          <button class="add-to-cart">Buy Now</button>
         </div>
       </div>
-      <div class="product">
+      <div class="product card-product">
         <div class="image">
           <img src="src/img/image1.jpg" alt="modelo 1">
         </div>
         <div class="name-price">
           <h3>Modelo 5</h3>
-          <span>$1000.0</span>
+          <span class="price">$1000.0</span>
         </div>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div class="stars">
@@ -143,16 +145,16 @@
           <i class="fa-solid fa-star"></i>
         </div>
         <div class="buy">
-          <button>Buy Now</button>
+          <button class="add-to-cart">Buy Now</button>
         </div>
       </div>
-      <div class="product">
+      <div class="product card-product">
         <div class="image">
           <img src="src/img/image1.jpg" alt="modelo 1">
         </div>
         <div class="name-price">
           <h3>Modelo 6</h3>
-          <span>$1000.0</span>
+          <span class="price">$1000.0</span>
         </div>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div class="stars">
@@ -163,11 +165,32 @@
           <i class="fa-solid fa-star"></i>
         </div>
         <div class="buy">
-          <button>Buy Now</button>
+          <button class="add-to-cart">Buy Now</button>
         </div>
       </div>
     </div>
   </main>
+
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <span id="close-cart" class="close-cart">&times;</span>
+        <h2>Carrito de compras</h2>
+        <ul id="cart-items"></ul>
+        <p id="total">Total: $0</p>
+        <button id="checkout">Finalizar compra</button>
+    </div>
+</div>
+
+<div id="purchase-modal" class="purchase-modal">
+    <div class="purchase-content">
+        <h2>¡Compra finalizada!</h2>
+        <p>¡Gracias por tu compra!</p>
+        <button id="close-purchase">Cerrar</button>
+    </div>
+</div>
+
+
+
 <footer class="footer">
   <div class="contenedor">
     <div class="footer-link">
@@ -194,7 +217,7 @@
       <div class="link">
         <h3>Sitemap</h3>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Shop</a></li>
           <li><a href="#">News</a></li>
@@ -224,7 +247,7 @@
   </div>
 </footer>
 
-
+<script src="assets/js/carrito.js"></script>
 </body>
 
 </html>
