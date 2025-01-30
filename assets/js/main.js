@@ -1,17 +1,8 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   const menuToggle = document.querySelector(".menu-toggle");
-//   const navMenu = document.querySelector(".nav-menu");
-
-//   menuToggle.addEventListener("click", () => {
-//     navMenu.classList.toggle("active");
-//   });
-// });
-
-
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('.nav-menu').classList.toggle('show');
+document.querySelector(".menu-toggle").addEventListener("click", function () {
+  document.querySelector(".nav-menu").classList.toggle("show");
+  this.classList.toggle("active");
 });
 
-const carrusel = document.querySelector('.carrusel');
+const carrusel = document.querySelector(".carrusel");
 const clone = carrusel.innerHTML;
 carrusel.innerHTML += clone;

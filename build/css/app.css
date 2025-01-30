@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -382,6 +382,7 @@ body > section {
   font-weight: 600;
   margin: 0;
 }
+
 .header .header__contenido h1 span {
   color: #df453e;
 }
@@ -397,62 +398,6 @@ body > section {
   color: #df453e;
 }
 
-.video {
-  position: relative;
-  min-height: 30rem;
-  max-height: 40rem;
-  overflow: hidden;
-}
-.video .overlay {
-  position: absolute;
-  background: linear-gradient(270deg, rgba(27, 62, 65, 0.6), rgba(27, 62, 65, 0.9));
-  inset: 0;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-.video video {
-  width: auto;
-}
-
-.video__contenido h2 {
-  color: #fff;
-  font-size: 7rem;
-  margin: 0;
-}
-.video__contenido a {
-  color: #fff;
-  font-size: 1.8rem;
-}
-.video__contenido a:hover {
-  color: #df453e;
-}
-.video__contenido span {
-  color: #fff;
-  margin: 0;
-  font-size: 1.8rem;
-}
-.video__contenido p {
-  color: #fff;
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.ruta {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.contenedor-productos {
-  width: 80vw;
-  height: 80vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
 .header-productos {
   width: 100%;
   text-align: center;
@@ -463,82 +408,12 @@ body > section {
   text-transform: uppercase;
 }
 
-.products {
-  width: 100%;
-  height: 70%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 4rem;
-}
+/* MAIN */
 
-.product {
-  position: relative;
-  background-color: #fff;
-  width: 35rem;
-  height: 55rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px 20px 40px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-.product:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-.product p {
-  font-size: 18px;
-  line-height: 25px;
-}
 
-.image {
-  width: 100%;
-  height: 60%;
-  display: grid;
-  place-items: center;
-}
-.image img {
-  width: 240px;
-}
 
-.name-price {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.name-price h3 {
-  font-size: 1.5em;
-  text-transform: capitalize;
-  margin: 0;
-}
-.name-price span {
-  font-size: 1.5em;
-  color: #df453e;
-}
+/* FOOTER */
 
-.stars {
-  font-size: 1.3em;
-  color: #fbc900;
-}
-
-.buy {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-.buy button {
-  padding: 10px 20px;
-  border-radius: 7px;
-  border: none;
-  background-color: #1b3e41;
-  color: #fff;
-}
-.buy button:hover {
-  transform: scale(1.1);
-}
 
 .footer {
   margin-top: 5rem;
@@ -612,10 +487,6 @@ form .btn {
 
 ::placeholder {
   color: #728385;
-}
-
-hr {
-  border: 1px solid #728385;
 }
 
 .footer-text {

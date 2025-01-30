@@ -2,135 +2,139 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nomada Shop</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
-    <!-- Custom CSS link -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <!-- Google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Bicycle Shop</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container">
-        <a href="#" class="logo">Nómada Bike</a>
-        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item dropdown"><a href="#">About Us</a></li>
-          <li class="nav-item dropdown">
-            <a href="#">Bikes</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Book a Bike</a></li>
-              <li><a href="#">Bike Rental</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="#">Pages</a></li>
-          <li class="nav-item"><a href="#">Contacts</a></li>
-        </ul>
+    <header class="header">
+      <div class="contenedor header__contenido">
+        <h1>Bicycle<span>Shop</span></h1>
+        <nav class="navegacion-principal">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Bikes</a>
+          <a href="#">Rides</a>
+          <a href="#">Contact</a>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <!--Este bloque contiene el cuerpo central de la pagina-->
-    <div class="central">
-      <!--<img src="/assets/img/Ciclismo 4v.jpg" alt="fondo" width="100%">-->
+    <main>
+      <section class="central">
+        <!--<img src="/assets/img/Ciclismo 4v.jpg" alt="fondo" width="100%">-->
+        <figure class="life">
+          <h2>Haz del camino <br> Tu mejor amigo</h2>
+          <img src="/assets/img/Ciclista MTB.jpg" alt="CiclistaMTB">
+        </figure>
+        
+        <figure class="bikes">
+            <!--<img class="img_bike" src="/assets/img/Bikes/Atom.png" alt="Atom">-->
+            <img class="img_bike" src="/assets/img/Bikes/Camp.png" alt="Camp">
+            <img class="img_bike" src="/assets/img/Bikes/Specialized.png" alt="Specialized">
+            <img class="img_bike" src="/assets/img/Bikes/Trek.png" alt="Trek">
+            <div class="box_black"></div>
+            <a href="">Bicicletas</a>
+        </figure>
 
-      <div class="life">
-        <h2>Haz del camino <br> tu mejor amigo</h2>
-        <img src="/assets/img/Ciclista MTB.jpg" alt="CiclistaMTB">
-      </div>
-      
-      <div class="bikes">
-          <!--<img class="img_bike" src="/assets/img/Bikes/Atom.png" alt="Atom">-->
-          <img class="img_bike" src="/assets/img/Bikes/Camp.png" alt="Camp">
-          <img class="img_bike" src="/assets/img/Bikes/Specialized.png" alt="Specialized">
-          <img class="img_bike" src="/assets/img/Bikes/Trek.png" alt="Trek">
-          <div class="box_black"></div>
-          <a href="">Bicicletas</a>
-      </div>
+        <section class="post_bike">
+          <figure class="under_bike">
+            <img class="img_post_bike" src="/assets/img/PostBike/Casco.png" alt="Casco">
+            <div class="box_black2"></div>
+            <a href="">Indumentaria</a>
+          </figure>
 
-      <div class="post_bike">
-        <div class="under_bike">
-          <img class="img_post_bike" src="/assets/img/PostBike/Casco.png" alt="Casco">
-          <div class="box_black2"></div>
-          <a href="">Indumentaria</a>
-        </div>
+          <figure class="under_bike">
+            <img class="img_post_bike" src="/assets/img/PostBike/Maza.png" alt="Maza">
+            <div class="box_black2"></div>
+            <a href="">Accesorios y <br>Componentes</a>
+          </figure>
 
-        <div class="under_bike">
-          <img class="img_post_bike" src="/assets/img/PostBike/Maza.png" alt="Maza">
-          <div class="box_black2"></div>
-          <a href="">Accesorios y <br>Componentes</a>
-        </div>
+          <figure class="under_bike">
+            <img class="img_post_bike" src="/assets/img/PostBike/Parttool.png" alt="Parttool">
+            <div class="box_black2"></div>
+            <a href="">Mantenimiento</a>
+          </figure>
+        </section>
+      </section>
 
-        <div class="under_bike">
-          <img class="img_post_bike" src="/assets/img/PostBike/Parttool.png" alt="Parttool">
-          <div class="box_black2"></div>
-          <a href="">Mantenimiento</a>
-        </div>
-      </div>
-    </div>
-
-    <!--Este bloque tiene el Sobre Pie de pagina-->
-    <div class="brands">
-      <div class="carrusel">
+      <!--Este bloque tiene el Sobre Pie de pagina-->
+      <figure class="carrusel">
         <img src="/assets/img/Logo RockBross.png" alt="RockBross" height="80px">  
         <img src="/assets/img/Logo Deore.png" alt="Deore" height="180px"> 
         <img src="/assets/img/Logo KMC.png" alt="KMC" height="80px">  
         <img src="/assets/img/Logo Maxxis.png" alt="Maxxis" height="120px"> 
         <img src="/assets/img/Logo ProWheel.png" alt="Prowheel" height="120px"> 
         <img src="/assets/img/Logo Shimano.png" alt="Shimano" height="110px">
+      </figure>
+    </main>
+
+    <footer class="footer">
+      <div class="contenedor">
+        <div class="footer-link">
+          <div class="link">
+            <h3>Useful links</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our community</a></li>
+              <li><a href="#">Local events</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Service plus</a></li>
+            </ul>
+          </div>
+          <div class="link">
+            <h3>Our Shop</h3>
+            <ul>
+              <li><a href="#">Bikes & parts</a></li>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Bike for rent</a></li>
+              <li><a href="#">Booking form</a></li>
+              <li><a href="#">Service plus</a></li>
+            </ul>
+          </div>
+          <div class="link">
+            <h3>Sitemap</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </div>
+          <div class="link">
+            <h3>Follow us</h3>
+            <div class="socials">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <h3>Subscribe</h3>
+            <form>
+              <input type="email" placeholder="email" />
+              <input class="btn" type="submit" value="Enviar" />
+            </form>
+          </div>
+        </div>
+        <hr />
+        <div class="footer-text">
+          <p>Politica de privacidad</p>
+          <p>Todos los derechos reservados</p>
+        </div>
       </div>
-    </div>
-
-    <!--Este bloque contendra el pie de pagina-->
-    <div class="footer"> 
-        <div class="sub_footer"> <!--Breve descripcion de Bicycle Shop-->
-          <h2 class="title">Nómada Bike</h2>
-          <p>
-            Ofrecemos bicicletas, accesorios y todo lo que 
-            necesitas para disfrutar del ciclismo al máximo. 
-            ¡Ven y equipa tu pasión! 
-          </p>
-        </div>
-
-        <div class="sub_footer">
-          <h2 class="title">Atencion al cliente</h2>
-          <ul>
-            <li><a href="#">Preguntas frecuentes</a></li>
-            <li><a href="#">Nuestras tiendas</a></li>
-            <li><a href="#">Libro de reclamaciones</a></li>
-            <li><a href="#">Delivery</a></li>
-          </ul>
-        </div>
-
-        <div class="sub_footer">
-          <h2 class="title">Contacto</h2>
-          <ul>
-            <li>Telf: 01 555 1234</li>
-            <li>Cel: +51 955123456</li>
-            <li>Email: <a href="">contacto@bicycleshop.com</a></li>
-            <li>Instagram: <a href="">@bicycle_shop</a></li>
-          </ul>
-        </div>
-
-        <div class="sub_footer">
-          <h2 class="title">Mensaje</h2>
-          <form class="send" action="#" method="post">
-            <textarea class="menssage_area" name="mensaje" placeholder="Escribe aqui tu mensaje o sugerencia..." required></textarea>
-            <button type="submit">Enviar</button>
-          </form>
-
-        </div>
-    </div>
+    </footer>
 
     <!-- Custom JS link -->
     <script src="./assets/js/main.js"></script>
