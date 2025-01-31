@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -372,6 +372,15 @@ body > section {
   padding: 10rem 0;
 }
 
+/* Estilos para el encabezado */
+.header {
+  background-color: #ffffff; /* Fondo blanco para el header */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombreado para destacar */
+  position: sticky; /* Hace que el header sea "pegajoso" */
+  top: 0;
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
 .header .header__contenido {
   padding: 2rem;
   display: flex;
@@ -385,6 +394,104 @@ body > section {
 .header .header__contenido h1 span {
   color: #df453e;
 }
+
+/* Estilos para el botón de hamburguesa */
+.hamburger {
+  display: none; /* Ocultar en pantallas grandes */
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  width: 100%;
+  height: 2px;
+  background-color: #1b3e41;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #1b3e41;
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hamburger-inner::before {
+  top: -8px;
+}
+
+.hamburger-inner::after {
+  top: 8px;
+}
+
+/* Efecto de activación del botón de hamburguesa */
+.hamburger.active .hamburger-inner {
+  background-color: transparent;
+}
+
+.hamburger.active .hamburger-inner::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-inner::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Estilos para la navegación móvil */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Muestra el botón en pantallas pequeñas */
+  }
+
+  .navegacion-principal {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculta el menú fuera de la pantalla */
+    width: 80%;
+    height: 100vh;
+    background-color: #1b3e41;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .navegacion-principal.active {
+    right: 0; /* Muestra el menú */
+    background-color: #fff; /* Fondo claro para visibilidad */
+  }
+
+  .navegacion-principal a {
+    color: #1b3e41; /* Color oscuro para enlaces */
+    font-size: 2rem;
+  }
+
+  .navegacion-principal a:hover {
+    color: #df453e; /* Color rojo al pasar el mouse */
+  }
+}
+
 
 .navegacion-principal {
   display: flex;

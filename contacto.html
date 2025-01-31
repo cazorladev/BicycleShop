@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bicycle Shop - Encuentra las mejores bicicletas, accesorios y mantenimiento para tus aventuras sobre ruedas."
+    />
+    <meta
+      name="keywords"
+      content="bicicletas, accesorios de ciclismo, mantenimiento de bicicletas, tienda de bicicletas"
+    />
+    <meta name="author" content="Bicycle Shop" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.bicycleshop.com" />
+
+    <!-- Preconexión a fuentes externas para mejorar el rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Enlace a hoja de estilos externa -->
+    <link rel="stylesheet" href="./assets/css/contacto.css" />
+
+    <!-- Enlace a FontAwesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <title>Contacto | Bicycle Shop</title>
+  </head>
+
+  <body>
+    <!-- Encabezado con logo, navegación y botón de menú móvil -->
+    <header class="header">
+      <div class="contenedor header__contenido">
+        <h1>Bicycle<span>Shop</span></h1>
+
+        <!-- Botón de menú hamburguesa para dispositivos móviles -->
+        <button class="hamburger" aria-label="Menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <!-- Menú de navegación principal -->
+        <nav class="navegacion-principal" aria-label="Menú principal">
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="carrito.html">Bicicletas</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Sección de contacto -->
+      <section id="contacto" class="central">
+        <h2>Contacto</h2>
+        <div class="contenedor">
+          <div class="contacto-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Dirección</h3>
+              <p>Calle , Ciudad, País</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <h3>Teléfono</h3>
+              <p>+51 999999999</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <p>info@bicycleshop.com</p>
+            </div>
+          </div>
+
+          <!-- Formulario de contacto -->
+          <form class="formulario-contacto" action="#" method="post">
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="asunto">Asunto:</label>
+              <input type="text" id="asunto" name="asunto" required />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+          </form>
+
+          <!-- Mapa de ubicación -->
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15606.001327321846!2d-77.0670592!3d-12.077861599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1738269831281!5m2!1ses-419!2spe"
+              width="800"
+              height="600"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pie de página con enlaces y redes sociales -->
+    <footer class="footer">
+      <div class="contenedor">
+        <div class="footer-link">
+          <div class="link">
+            <h3>Enlaces Útiles</h3>
+            <ul>
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Nuestra Comunidad</a></li>
+              <li><a href="#">Eventos Locales</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Servicios</a></li>
+            </ul>
+          </div>
+          <div class="link">
+            <h3>Nuestra Tienda</h3>
+            <ul>
+              <li><a href="#bikes">Bicicletas y Piezas</a></li>
+              <li><a href="#clothing">Ropa</a></li>
+              <li><a href="#rent">Alquiler de Bicicletas</a></li>
+              <li><a href="#booking">Reservas</a></li>
+            </ul>
+          </div>
+          <div class="link">
+            <h3>Sitemap</h3>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="nosotros.html">Características</a></li>
+              <li><a href="carrito.html">Tienda</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="link">
+            <h3>Síguenos</h3>
+            <div class="socials">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <h3>Suscríbete</h3>
+            <form>
+              <input type="email" placeholder="Tu email" required />
+              <input class="btn" type="submit" value="Suscribirse" />
+            </form>
+          </div>
+        </div>
+        <hr />
+        <div class="footer-text">
+          <p>Politica de privacidad</p>
+          <p>Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="./assets/js/main.js" defer></script>
+  </body>
+</html>
