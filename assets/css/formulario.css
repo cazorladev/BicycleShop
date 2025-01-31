@@ -5,13 +5,13 @@
   justify-content: center;
   text-align: center;
   font-size: 5rem;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   margin-bottom: 0;
   margin-top: 20px;
 }
 
 #aceptar {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 90%;
   display: flex;
   justify-content: center;
@@ -24,16 +24,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid green;
-}
-
-#formulario-2 {
   /* border: 2px solid green; */
 }
 
+
 #formulario p {
   padding: 0 0 0 20px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 } 
 
 #formulario i {
@@ -43,7 +40,7 @@
 #formulario  form {
   display: grid;
   padding: 20px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 100%;
 }
 
@@ -66,7 +63,11 @@
   padding: 20px 10px 10px 10px;
   margin: 20px;
   text-align: left;
-}             
+} 
+
+.formulario form input {
+  padding: 200px 0px;
+}
 
 
 button {
@@ -74,9 +75,9 @@ button {
   width: 300px;   
   height: 10px;
   background-color: transparent;
-  font-weight: semibold;
-  color: #444 ;
-  font-size: 17px;
+  font-weight: 600;
+  color: #f1f1f1 ;
+  font-size: 20px;
   padding: 15px 15px 30px 15px;
   border: 2px solid #eee;
   border-radius: .5rem;
@@ -94,11 +95,12 @@ button {
   #aceptar {
   display: flex;
   font-size: 10px;
-  margin: 0% 15%;
+  margin: 0 auto;
+  width: 80%;
   }
 
   #aceptar label {
-  padding: 15px;
+  padding: 1% 10%;
   display: inline-block;
   /* border: 2px solid green */
   }
@@ -114,7 +116,17 @@ button {
 
   #boton-pago {
   padding: 0 10px 10px 10px;
-  margin: 0 10px 10px 10px;
+  width: 80%;
+  /* border: 2px solid green; */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1%;
+  }
+
+  #boton-pago button {
+    background-color: #df453e;
   }
 
   span {

@@ -72,41 +72,41 @@
           <h2 id="identidad"><i class="bi bi-person-raised-hand"></i> Datos de Identidad</h2>
 
          <label for="name"><i class="bi bi-file-person"></i>Nombre completo:</label>
-         <input type="text" id="text" name="Nombre" placeholder="Ingresa tu nombre" required></input>   
+         <input type="text" id="text" name="Nombre" class="input-form" placeholder="Ingresa tu nombre" required></input>   
 
         <label for="ddcc"><i class="bi bi-calendar"></i>Fecha de nacimiento:</label>
          <input type="date" id="date" name="ddcc" required></input>
 
          <label for="email"><i class="bi bi-envelope-at"></i>Email:</label>
-         <input type="email" id="email" name="email" placeholder="Ingresa tu email" required></input>
+         <input type="email" id="email" name="email" class="input-form" placeholder="Ingresa tu email" required></input>
 
          <label for="numero"><i class="bi bi-telephone"></i>Numero:</label>
-         <input type="number" id="number" name="numero" placeholder="Ingresa tu número telefonico" required></input>
+         <input type="number" id="number" name="numero" class="input-form" placeholder="Ingresa tu número telefonico" required></input>
 
          <label for="codigo"><i class="bi bi-envelope-paper"></i>Código postal:</label>
-         <input type="number" id="codigo" name="codigo" placeholder="Ingresa tu código postal" required></input>
+         <input type="number" id="codigo" name="codigo" class="input-form" placeholder="Ingresa tu código postal" required></input>
         
 
         <h2 id="pago"><i class="bi bi-lock"></i> Datos de pago</h2>
+
+        <label for="card-name"><i class="bi bi-credit-card"></i> Nombre del titular de la tarjeta:</label>
+        <input type="text" id="card-name" name="card-name" class="input-form" placeholder="Nombre en la tarjeta" required>
  
-         <label for="tarjeta"><i class="bi bi-credit-card"></i>Numero de tarjeta:</label>
-         <input type="number" id="number" name="tarjeta" required></input>
-          
-         <label for="cvv"><i class="bi bi-key"></i>CVV / CVC:</label>
-         <input type="password" id="password" name="cvv" required></input>
+        <label for="card-number"><i class="bi bi-credit-card"></i> Número de tarjeta:</label>
+        <input type="text" id="card-number" name="card-number" class="input-form" placeholder="1234 5678 9012 3456" pattern="[0-9]{16}" required>
+ 
+        <label for="cvv"><i class="bi bi-key"></i> CVV / CVC:</label>
+        <input type="password" id="cvv" name="cvv" class="input-form" placeholder="123" pattern="[0-9]{3}" required>
+ 
+        <label for="expiry"><i class="bi bi-calendar-x"></i> Fecha de expiración (MM/YY):</label>
+        <input type="text" id="expiry" name="expiry" class="input-form" placeholder="MM/YY" maxlength="5" required>
 
-         <label for="expiracion"><i class="bi bi-calendar-x"></i>Fecha de expiración (MM/YY):</label>
-        <input type="text" id="expiracion" name="expiracion" placeholder="MM/YY" maxlength="5" required>
-
-        <script>
-            document.getElementById('expiracion').addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, ''); // Solo permite números
-             if (value.length >= 2) {
-             value = value.substring(0,2) + '/' + value.substring(2,4);
-             }
-            e.target.value = value;
-            });
-        </script>
+        <h2 id="resumen">Resumen de la Compra</h2>
+        <div id="resumen-compra">
+        <p>Subtotal: $1000</p>
+        <p>Envío: $50</p>
+        <p>Total: $1050</p>
+        </div>
 
         </form>
     </section>
@@ -127,7 +127,7 @@
     </section>
 
     <section id="boton-pago">
-      <button type="submit">Pagar $1000 with CC</button>      
+      <button type="submit">Pagar</button>      
     </section>
 
     </main>
